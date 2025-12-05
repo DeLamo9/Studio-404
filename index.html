@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STUDIO 404 | Future Fashion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="#"><img src="assets/logo.png" alt="STUDIO 404"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#shop">TIENDA</a></li>
+                <li><a href="#collections">COLECCIONES</a></li>
+                <li><a href="#about">NOSOTROS</a></li>
+            </ul>
+        </nav>
+        <div class="cart-icon" onclick="window.location.href='cart.html'">
+            <i class="fas fa-shopping-bag"></i>
+            <span class="cart-count">0</span>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <img src="assets/logo.png" alt="STUDIO 404" class="hero-logo">
+            <p style="font-size: 1.2rem; letter-spacing: 2px; color: #ccc;">Locurita Crazy</p>
+            <button class="cta-btn" onclick="document.getElementById('shop').scrollIntoView({behavior: 'smooth'})">VER
+                COLECCIÓN</button>
+        </div>
+    </section>
+
+    <section id="shop" class="products">
+        <h2 class="section-title">ÚLTIMO LANZAMIENTO</h2>
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <img src="assets/hoodie.png" alt="Cyber Hoodie" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Sudadera Chrome V1</h3>
+                    <span class="product-price">€89.99</span>
+                    <button class="add-btn"
+                        onclick="addToCart('Sudadera Chrome V1', '€89.99', 'assets/hoodie.png')">Añadir al
+                        Carrito</button>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <img src="assets/tshirt.png" alt="Neon Tee" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Camiseta Neon Glitch</h3>
+                    <span class="product-price">€45.00</span>
+                    <button class="add-btn"
+                        onclick="addToCart('Camiseta Neon Glitch', '€45.00', 'assets/tshirt.png')">Añadir al
+                        Carrito</button>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <img src="assets/pants.png" alt="Cargo Pants" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Cargo Silver 404</h3>
+                    <span class="product-price">€120.00</span>
+                    <button class="add-btn"
+                        onclick="addToCart('Cargo Silver 404', '€120.00', 'assets/pants.png')">Añadir al
+                        Carrito</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 STUDIO 404. Todos los derechos reservados.</p>
+        <div style="margin-top: 20px; font-size: 1.5rem;">
+            <i class="fab fa-instagram" style="margin: 0 10px; cursor: pointer;"></i>
+            <i class="fab fa-tiktok" style="margin: 0 10px; cursor: pointer;"></i>
+            <i class="fab fa-twitter" style="margin: 0 10px; cursor: pointer;"></i>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
