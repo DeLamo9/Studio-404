@@ -47,25 +47,34 @@ header {
     padding: 20px 5%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     z-index: 1000;
     background: rgba(10, 10, 10, 0.8);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--glass-border);
 }
 
+.logo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
 .logo img {
     height: 50px;
     filter: drop-shadow(0 0 10px var(--primary-pink));
-    margin-right: 60px;
-    /* Space between logo and nav */
+}
+
+nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul {
     display: flex;
     gap: 40px;
     list-style: none;
-    margin-right: auto;
-    /* Pushes everything else (cart) to the right */
 }
 
 nav a:hover {
@@ -74,6 +83,9 @@ nav a:hover {
 }
 
 .cart-icon {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
     position: relative;
     cursor: pointer;
     font-size: 1.5rem;
