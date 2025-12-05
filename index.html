@@ -22,7 +22,7 @@
                 <li><a href="#about">NOSOTROS</a></li>
             </ul>
         </nav>
-        <div class="cart-icon" onclick="toggleCart()">
+        <div class="cart-icon" onclick="window.location.href='cart.html'">
             <i class="fas fa-shopping-bag"></i>
             <span class="cart-count">0</span>
         </div>
@@ -46,7 +46,9 @@
                 <div class="product-info">
                     <h3 class="product-title">Sudadera Chrome V1</h3>
                     <span class="product-price">€89.99</span>
-                    <button class="add-btn" onclick="addToCart()">Añadir al Carrito</button>
+                    <button class="add-btn"
+                        onclick="addToCart('Sudadera Chrome V1', '€89.99', 'assets/hoodie.png')">Añadir al
+                        Carrito</button>
                 </div>
             </div>
 
@@ -56,7 +58,9 @@
                 <div class="product-info">
                     <h3 class="product-title">Camiseta Neon Glitch</h3>
                     <span class="product-price">€45.00</span>
-                    <button class="add-btn" onclick="addToCart()">Añadir al Carrito</button>
+                    <button class="add-btn"
+                        onclick="addToCart('Camiseta Neon Glitch', '€45.00', 'assets/tshirt.png')">Añadir al
+                        Carrito</button>
                 </div>
             </div>
 
@@ -66,7 +70,9 @@
                 <div class="product-info">
                     <h3 class="product-title">Cargo Silver 404</h3>
                     <span class="product-price">€120.00</span>
-                    <button class="add-btn" onclick="addToCart()">Añadir al Carrito</button>
+                    <button class="add-btn"
+                        onclick="addToCart('Cargo Silver 404', '€120.00', 'assets/pants.png')">Añadir al
+                        Carrito</button>
                 </div>
             </div>
         </div>
