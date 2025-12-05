@@ -83,12 +83,16 @@ nav a:hover {
 }
 
 .cart-icon {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
     position: relative;
     cursor: pointer;
     font-size: 1.5rem;
+    /* Removed flex: 1 to prevent full width clickable area */
+}
+
+.header-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .cart-count {
@@ -299,7 +303,9 @@ footer {
     .section-title {
         font-size: 2rem;
     }
-}/* Cart Page */
+}
+
+/* Cart Page */
 .cart-page {
     padding: 120px 5% 50px;
     min-height: 80vh;
