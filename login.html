@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso | STUDIO 404</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="assets/logo.png" alt="STUDIO 404"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html#shop">TIENDA</a></li>
+                <li><a href="index.html#collections">COLECCIONES</a></li>
+                <li><a href="index.html#about">NOSOTROS</a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            <div class="user-icon" onclick="window.location.href='login.html'">
+                <img src="assets/mewtwo_icon.png" alt="Login">
+            </div>
+            <div class="cart-icon" onclick="window.location.href='cart.html'">
+                <i class="fas fa-shopping-bag"></i>
+                <span class="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="login-page">
+        <div class="login-container">
+            <div class="form-toggle">
+                <button id="login-btn" class="toggle-btn active" onclick="showForm('login')">Iniciar Sesión</button>
+                <button id="register-btn" class="toggle-btn" onclick="showForm('register')">Registrarse</button>
+            </div>
+
+            <div id="login-form" class="auth-form">
+                <h2>Bienvenido de nuevo</h2>
+                <form>
+                    <div class="input-group">
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" placeholder="tu@email.com" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="login-password">Contraseña</label>
+                        <input type="password" id="login-password" placeholder="••••••••" required>
+                    </div>
+                    <button type="submit" class="submit-btn">ENTRAR</button>
+                    <p class="forgot-password"><a href="#">¿Olvidaste tu contraseña?</a></p>
+                </form>
+            </div>
+
+            <div id="register-form" class="auth-form" style="display: none;">
+                <h2>Únete al Club</h2>
+                <form>
+                    <div class="input-group">
+                        <label for="reg-name">Nombre</label>
+                        <input type="text" id="reg-name" placeholder="Tu nombre" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="reg-email">Email</label>
+                        <input type="email" id="reg-email" placeholder="tu@email.com" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="reg-password">Contraseña</label>
+                        <input type="password" id="reg-password" placeholder="••••••••" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="reg-confirm">Confirmar Contraseña</label>
+                        <input type="password" id="reg-confirm" placeholder="••••••••" required>
+                    </div>
+                    <button type="submit" class="submit-btn">CREAR CUENTA</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 STUDIO 404. Todos los derechos reservados.</p>
+        <div style="margin-top: 20px; font-size: 1.5rem;">
+            <i class="fab fa-instagram" style="margin: 0 10px; cursor: pointer;"></i>
+            <i class="fab fa-tiktok" style="margin: 0 10px; cursor: pointer;"></i>
+            <i class="fa-brands fa-x-twitter" style="margin: 0 10px; cursor: pointer;"></i>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function showForm(formType) {
+            const loginForm = document.getElementById('login-form');
+            const registerForm = document.getElementById('register-form');
+            const loginBtn = document.getElementById('login-btn');
+            const registerBtn = document.getElementById('register-btn');
+
+            if (formType === 'login') {
+                loginForm.style.display = 'block';
+                registerForm.style.display = 'none';
+                loginBtn.classList.add('active');
+                registerBtn.classList.remove('active');
+            } else {
+                loginForm.style.display = 'none';
+                registerForm.style.display = 'block';
+                loginBtn.classList.remove('active');
+                registerBtn.classList.add('active');
+            }
+        }
+    </script>
+</body>
+
+</html>
